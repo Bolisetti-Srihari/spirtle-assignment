@@ -236,7 +236,7 @@ class Master extends Component{
         )
       }
       onBackButton=()=>{
-        return <Master/>
+        this.setState({displayResult:false})
       }
       getOutPut=()=>{
         const {resultValue}=this.state       
