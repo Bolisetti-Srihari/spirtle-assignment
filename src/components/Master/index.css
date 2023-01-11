@@ -1,0 +1,13 @@
+.form-order{
+    display: flex;
+    flex-direction: column;
+}
+.error-msg{
+    color: red;
+}
+.result{
+    font-weight: bold;
+    color: black;
+    font-size: 50px;
+    margin-left: 20px;
+}
