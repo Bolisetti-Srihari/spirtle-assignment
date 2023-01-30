@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Master from "../Master"
+import Home from "../Home";
 
 import "./index.css"
 const intialState={
@@ -93,7 +93,7 @@ function Login() {
 
 
   const onSuccess=()=>{
-    return <Master/>
+    return <Home/>
   }
 
   const onLoginButton=(event)=>{

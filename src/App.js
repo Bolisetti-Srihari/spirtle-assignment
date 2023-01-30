@@ -1,5 +1,6 @@
+import Login from "./components/Login"
 
-import Login from "./components/Login";
+
 const App=()=>(
   <Login/>
 )
