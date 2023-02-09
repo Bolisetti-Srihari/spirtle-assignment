@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com"
 
 import Home from "../Home";
 
@@ -61,7 +62,7 @@ function Login() {
         </label>
         <input
         onChange={onLoginPhoneNumber}
-  
+          
           type="text"
           id="password"
           className="password-input-filed"
@@ -80,6 +81,7 @@ function Login() {
         </label>
         <input
         onChange={onLoginEmail}
+      
           type="text"
           id="email"
           className="username-input-filed"
@@ -118,12 +120,8 @@ function Login() {
 
   const loginPage=()=>(
     <>
-    
-    
-    
-
      <div className="login-form-container">
-      <h1 className="login-heading">Spritle Login</h1>
+      <h1 className="login-heading">Palnesto Business Solutions PVT Login</h1>
     <form className="form-container" onSubmit={onLoginButton}>
     <div className="input-container">{renderUsernameField()}</div>
     <div className="input-container">{renderPasswordField()}</div>
@@ -188,6 +186,17 @@ function Login() {
 
   const onSignUpButton=(event)=>{
     event.preventDefault()
+     
+    emailjs.sendForm('service_yfxlefl', 'template_ozkny73', event.target, 'dh1A_DZq9MJxnkjm0')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    event.target.reset()
+
+
+
     if (email==="" && phoneNumber==="" && dateOfBirth==="" && address===""){
       setSignInEmpty(true)
     }else{

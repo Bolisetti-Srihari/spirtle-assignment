@@ -1,0 +1,30 @@
+.heading {
+    font-family: sans-serif;
+    align-self: center;
+    margin-top: 100px;
+    color: black;
+   
+  }
+  @media (min-width:830px){
+    .heading{
+      position: sticky;
+      top: 50%;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 78%;
+    margin-left: 2%;
+    height: 70vh;
+  }
+  @media  (max-width: 830px) {
+    .container{
+        width: 100%;
+        margin-left: 0%;
+       
+    }
+  }
+  
